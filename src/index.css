@@ -1,0 +1,1094 @@
+body {
+  width: 98.8vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display:flex;
+  align-items: center;
+  background-position: center center;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@media (min-width: 600px) and (max-width:900px){
+  h1{
+    position: flex;
+  }
+}
+
+/* Carousel /////////////////////////////*/
+
+.container-carousel{
+  position: absolute;
+  left: 0;
+  top: 23em;
+  margin-top: 20em;
+  margin-left: 4em;
+  width: 48em;
+  color: black;
+}
+
+.carouselInner{
+  width: 780px;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  transition:all .6s;
+}
+
+
+.carouselInner .izquierda {
+  flex: 5%;
+  height: 100%;
+  background-color:rgb(0,0,0,.6);
+  display: grid;
+  place-items: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px #000000;
+}
+
+.carouselInner .centro{
+  flex: 90%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align-last: center;
+  text-align: justify;
+  font-size: 2em;
+  box-shadow: 0px 5px 5px #000000;
+  color: #ffffff;
+  text-shadow: 0px 5px 5px #000000;
+}
+
+.carouselInner .derecha {
+  flex: 5%;
+  height: 100%;
+  background-color:rgb(0,0,0,.6);
+  display: grid;
+  place-items: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px #000000;
+}
+
+.iconodesalud{
+  position: absolute;
+  top: 3em;
+  left: 15em;
+  width: 5em;
+  height: 5em;
+  background-image: url("/home/luiszrita/Workspace/Intranet/intranet-client/src/images/iconodesaludrojo.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.contenedorTexto{
+  position: absolute;
+  width: 23em;
+  height: 31.3em;
+  margin: 0;
+  left: 48.5em;
+  top: 0;
+  box-shadow: 5px 5px 5px #000000;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  background: linear-gradient(180deg, #ffffff 0%, #ffb0af 100%);
+}
+
+.Texto{
+  z-index: 1;
+}
+
+.Texto > ul > li{
+  list-style: none;
+  margin-right: 2em;
+  font-size: larger;
+}
+
+.Texto > ul > li > p{
+  position: absolute;
+  top: 9.6em;
+  left: 0.5em;
+  width: 16.6em;
+  height: 10em;
+  margin-right: 1.2em;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-right: 1em;
+  font-weight: 100;
+  color: white;
+  background-color: #AF0403;
+  box-shadow: 1.5px 3px 3px #000000;
+}
+
+.Texto > ul > li > h3{
+  position: absolute;
+  top: 4em;
+  left: 0;
+  padding: 0.5em;
+  padding-left: 1em;
+  align-items: center;
+  justify-content: center;
+  place-content: center center;
+  color: #AF0403;
+}
+
+/* Navbar Material-ui /////////////////////////////*/
+.container-icono{
+  position: absolute;
+  top: -1.6em;
+  margin-top: 2em;
+  padding-left: 2em;
+  background-image: url('/home/luiszrita/Workspace/Intranet/intranet-client/src/images/logov2.png');
+  background-size: cover;
+  background-position: center;
+  width: 10em;
+  height: 3.3em;
+  z-index: 1;
+}
+
+.menu-escritorio{
+  width: 95.1vw;
+  display: flex;
+  justify-content: center center;
+  align-items: center;
+  color: #464646;
+  z-index: 1;
+}
+
+
+
+.menu-escritorio > ul{
+  position: relative;
+  display: flex;
+  left: 18em;
+  flex: 1;
+  max-width: 25em;
+  min-width: 7em;
+  justify-content: space-evenly;
+}
+
+.menu-escritorio > ul > li{
+  list-style: none;
+  display: inline;
+}
+
+.Bis{
+  position: flex;
+  display: flex;
+  margin-left: 25em;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #fa3939;
+  border-radius: 3px;
+  border: 2px solid #fa3939;
+}
+.Bis:hover{
+  transition-duration: 1s;
+  color: #ffffff;
+  background-color: #AF0403;
+  border: 2px solid #AF0403;
+}
+
+/* Letras de la pagina de inicio */
+
+.paginicio {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  left: 8em;
+  line-height: 0;
+  color: #000000;
+}
+
+.eslogan{
+  position: absolute;
+  top: 6.5em;
+  width: 20em;
+  height: 10em;
+  line-height: .5;
+  font-size: x-large;
+}
+
+.eslogan > h5{
+  font-weight: lighter;
+}
+
+.paginicio > h4{
+  font-weight: 100;
+}
+
+/* windows */
+
+.contenedor-windows1{
+  position: absolute;
+  left: 38em;
+  top: 22em;
+  width: 13.5em;
+  height: 13.5em;
+  border-radius: 18px 18px 18px 18px;
+  box-shadow: 3px 3px 3px #414040;
+  color: #000000;
+  background-color: #eeeeee;
+  opacity: .8;
+}
+
+.windows1{
+  position: absolute;
+  top: 22em;
+  left: 32.2em;
+  width: 8em;
+  height: 5em;
+  margin: 1em;
+  font-size:larger;
+  text-align: center;
+  opacity: none;
+  color: black;
+}
+
+.windows1 > p{
+  font-size: x-small;
+  line-height: 1.5;
+  margin-left: .5em;
+
+}
+
+
+.icono1{
+  position: absolute;
+  top: -3em;
+  left: 2.3em;
+  width: 3.5em;
+  height: 3.5em;
+  background-image: url('/home/luiszrita/Workspace/Intranet/intranet-client/src/images/icon7112.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+.contenedor-windows2{
+  position: absolute;
+  left: 53em;
+  top: 15em;
+  width: 13.5em;
+  height: 13.5em;
+  border-radius: 18px 18px 18px 18px;
+  box-shadow: 3px 3px 3px #414040;
+  color: #000000;
+  background-color: #eeeeee;
+  opacity: .8;
+}
+
+.windows2{
+  position: absolute;
+  top: 16.5em;
+  left: 44.8em;
+  width: 8em;
+  height: 5em;
+  margin: 1em;
+  font-size:larger;
+  opacity: none;
+  color: black;
+}
+
+.windows2 > p{
+  font-size: x-small;
+  line-height: 1.5;
+  margin-left: 2em;
+
+}
+
+.windows2 > h4 {
+  margin-left: 1em;
+}
+
+.icono2{
+  position: absolute;
+  top: -3em;
+  left: 2.3em;
+  width: 3.5em;
+  height: 3.5em;
+  background-image: url('/home/luiszrita/Workspace/Intranet/intranet-client/src/images/icon7113.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+/* formas del fondo de pantalla //////////////////////////////////////////*/
+
+
+.fdepantalla1{
+  display:flex;
+  top: 0em;
+  left: 0em;
+  width: 68em;
+  height: 35em;
+  justify-content:right;
+  z-index: -1;
+  background-image: url("/home/luiszrita/Workspace/Intranet/intranet-client/src/images/fdepantalla1.png");
+  background-size: cover;
+}
+
+/* Inicia Secion en Venemergencia */
+
+#contenedor-iniciasesion {
+  position: absolute;
+  top:-3em;
+  left: 3em;
+  width: 1180px;
+  height: 540px;
+  margin: 100px auto;
+}
+
+.ISforget > a{
+  color: #56BFBA;
+  font-weight: 600;
+  margin-left: 5em;
+  font-size: smaller;
+  text-decoration: none;
+}
+
+.ISforget > button{
+  top: 2em;
+  background-color: #e60000;
+  color: #ffffff;
+  padding-left: 5em;
+  padding-right: 5em;
+  font-size: medium;
+}
+
+.fdepantallaIS{
+  position: absolute;
+  top: .75em;
+  left: -3em;
+  width: 30em;
+  height: 40em;
+  background-image: url('/home/luiszrita/Workspace/Intranet/intranet-client/src/images/fdepantallaIS.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.col-md-6 {
+  position: absolute;
+  left: 5em;
+  margin-left: 24em ;
+  margin-top: 10em;
+  width: 300px;
+  height: 300px;
+  padding: 10px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+[type=email], [type=number], [type=password], [type=text] {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+}
+
+[type=submit] {
+  margin-top: 25px;
+  width: 80%;
+  border: 0;
+  background-color: #fa3939;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+[type='text']:focus {
+  outline: none;
+  border-color: #fa3939;
+}
+
+[type='password']:focus {
+  outline: none;
+  border-color: #fa3939;
+}
+
+[type='number']:focus {
+  outline: none;
+  border-color: #fa3939;
+}
+
+[type='email']:focus {
+  outline: none;
+  border-color: #fa3939;
+}
+
+.whysign {
+  float: left;
+  background-color: white;
+  width: 250px;
+  height: 180px;
+  border-radius: 0 5px 5px 0;
+  padding-top: 20px;
+  padding-right: 200px;
+}
+
+/* Ventana de Nosotros */
+
+.fcuadro1{
+  position:absolute;
+  top: -5em;
+  left: 4em;
+  width: 1145px;
+  height: 1050px;
+}
+
+
+.quienesSomos{
+  width: 20em;
+}
+
+.logo-g{
+  position: absolute;
+  top: 35em;
+  left: 2em;
+  width: 30em;
+  height: 25em;
+  background-image: url("/home/luiszrita/Workspace/Intranet/intranet-client/src/images/logo-g.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.misionVisionValores{
+  position: absolute;
+  left: 32em;
+  top: 27em;
+  width: 36em;
+  height: 42em;
+}
+.mision > h3{
+  margin-left: 3.8em;
+  color: #AF0403;
+  font-size: 25px;
+  font-weight: bold;
+} 
+
+.misionp{
+  width: 32em;
+  height: 7em;
+  padding: 2em;
+  padding-bottom: 0;
+  background-color: #e60000;
+  border-radius: 3em 3em 3em 3em;
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 5px 5px 5px #000000;
+}
+
+.vision > h3{
+  margin-left: 3.8em;
+  color: #AF0403;
+  font-size: 25px;
+  font-weight: bold;
+} 
+
+.visionp{
+  width: 32em;
+  height: 7em;
+  padding: 2em;
+  padding-bottom: 0;
+  background-color: #e60000;
+  border-radius: 3em 3em 3em 3em;
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 5px 5px 5px #000000;
+}
+
+.valores > h3{
+  margin-left: 3.8em;
+  color: #AF0403;
+  font-size: 25px;
+  font-weight: bold;
+} 
+
+.valoresp{
+  width: 32em;
+  height: 7em;
+  padding: 2em;
+  padding-bottom: 0;
+  background-color:  #e60000;
+  border-radius: 3em 3em 3em 3em;
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 5px 5px 5px #000000;
+}
+
+.container-contacto{
+  position: absolute;
+  left: 0;
+  top: 78em;
+  width: 100%;
+  height: 20em;
+  display: flex;
+  background-color: #FAFAF8;
+}
+
+.contactos-info > ul > li > h3{
+  width: 20em;
+}
+
+.contactos-info > ul > li > h5{
+  color: #363636;
+  font-weight:450;
+}
+
+.contactos-info > ul{
+  position: absolute;
+  list-style: none;
+  display: flex;
+}
+
+.contactos-info > ul > li{
+  display:inline-block;
+  width: 17em;
+  margin-left: 2em;
+  padding: 1em;
+  color: #000000;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.another-info {
+  position: absolute;
+  list-style: none;
+  display: flex;
+  left: 55em;
+  top: 2em;
+}
+
+.icono-redes{
+  position: absolute;
+  left: 54em;
+  top: 5em;
+}
+
+.twitter{
+  width: 1.8em;
+  height: 1.8em;
+  transition-duration: 2s;
+  background-image: url('/home/luiszrita/Workspace/Intranet/intranet-client/src/images/icontwitter7115.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.facebook{
+  width: 1.8em;
+  height: 1.8em;
+  transition-duration: 2s;
+  background-image: url('/home/luiszrita/Workspace/Intranet/intranet-client/src/images/iconfacebook 7116.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.instagram{
+  width: 1.8em;
+  height: 1.8em;
+  transition-duration: 2s;
+  background-image: url('/home/luiszrita/Workspace/Intranet/intranet-client/src/images/iconinstagram 7114.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.group-venemergencia{
+  position: absolute;
+  top: 16em;
+  left: 30em;
+  width: 20em;
+  height: 1em;
+  align-items: center;
+}
+
+.linea-horizontal{
+  position: absolute;
+  top: 15em;
+  left: 5em;
+  height: 0.01em;
+  width: 70em;
+  background-color: #B2B2B2;
+}
+
+.linea-vertical{
+  position: absolute;
+  top: 2em;
+  left: 50em;
+  height: 13em;
+  width: 0.01em;
+  background-color: #B2B2B2;
+}
+
+/* Contactanos */
+
+.container-B-contacto{
+  position:absolute;
+  top: -5em;
+  left: 4em;
+  width: 1145px;
+  height: 1150px;
+}
+
+.tittle-contacto{
+  position: absolute;
+  top: 18em;
+  left: 13em;
+  padding: .5em;
+  padding-left: 0em;
+  width: 17em;
+  color: rgb(77, 77, 77);
+  font-size:large;
+  font-weight: lighter;
+  border-radius: 1em 1em 1em 1em;
+}
+
+.windows-contacto{
+  position: absolute;
+  left: -16em;
+  top: 25em;
+  margin-left: 24em ;
+  margin-top: 10em;
+  width: 320px;
+  height: 400px;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 5px 5px 5px #000000;
+}
+
+.T-contacto{
+  padding-left: 3em;
+}
+
+.B-contacto{
+  position: absolute;
+  width: 150px;
+  padding-left: 6em;
+}
+
+/*Google Map */
+ .googleMap{
+  position: absolute;
+  background-image: url("/home/luiszrita/Workspace/Intranet/intranet-client/src/images/Map.png");
+  top: 35em;
+  left: 36em;
+  width: 30em;
+  height: 27em;
+ }
+
+ .quienesSomos{
+   position: relative;
+   top: 19em;
+   left: 16em;
+   color: #696969;
+   font-size:medium;
+   font-family: Roboto;
+ }
+
+ .mvv {
+   position: relative;
+   top: 20em;
+   left: 8em;
+   width: 5em;
+ }
+
+ .mvv > ul > li {
+   list-style: none;
+   height: 5em;
+ }
+
+ .mvv > ul{
+   width: 5em;
+ }
+
+
+ .botonSubtituloUs{
+   position: absolute;
+   left: 20em;
+   top: 25em;
+   width: 24em;
+   height: 8.5em;
+   padding: 3em;
+   color: #696969;
+   background-color: #eeeeee;
+   border-radius: 10px 10px 10px 10px;
+   box-shadow: 5px 5px 5px #000000;
+ }
+
+.botonSubtituloUs > p{
+  animation-duration: 1.5s;
+  animation-name: slidein;
+  line-height: 2;
+  text-align: center; 
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+ .botonTituloUs{
+   position: absolute;
+   left: 29em;
+   top: 23em;
+   font-weight: bold;
+   font-size: large;
+   color:#e60000;
+   font-family: Roboto;
+ }
+
+ .botonTituloUs > p{
+  animation-duration: 1.5s;
+  animation-name: slidein;
+ }
+
+ .tittle-us2{
+  position: absolute;
+  left: 20em;
+  top: 43em;
+  color: #696969;
+ }
+
+ .contenedor-lius{
+   position: absolute;
+   top: 46em;
+ }
+
+.contenedor-lius > ul{
+  position: absolute;
+  display: flex;
+  width: 20em;
+  
+}
+
+ .contenedor-lius > ul > li{
+   list-style: none;
+   margin: 1.5em;
+ }
+
+ .contenedor-lius > ul > li > h3{
+  list-style: none;
+  width: 11em;
+  background-color: #e60000;
+  padding: 1em;
+  color: #ffffff;
+  font-size:medium;
+  border-radius: 10px 10px 10px 10px;
+  padding-left: 1.5em;
+}
+
+.contenedor-lius > ul > li > p{
+  font-size: small;
+  color: #696969;
+}
+
+/* //////////////////////INTERFAS DE USUARIO////////////////////////// */
+
+.cuadro1d{
+  position:absolute;
+  top: 0;
+  width: 102.2%;
+  left: -2em;
+  padding-left: 23em;
+  padding-top: 4em;
+  padding-right: 3em;
+  height: 1060px;
+  background-color: #D2CCCC;
+  z-index: 1;
+}
+
+.logov2I{
+  position: absolute;
+  background-image: url('/home/luiszrita/Workspace/Intranet/intranet-client/src/images/logov2.png');
+  background-position: center;
+  background-size: cover;
+  top: 1em;
+  left: 2em;
+  width: 15em;
+  height: 4.17em;
+  
+}
+
+.containerI1{
+  position: absolute;
+  top: 8.5em;
+  background-color: #f4f4f4;;
+  width: 45em;
+  height: 28em;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.containerI2{
+  position: absolute;
+  background-color: #ffffff;
+  top: 8.5em;
+  left: 70em;
+  width: 22em;
+  height: 20em;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.containerI3{
+  position: absolute;
+  background-color: #b3b3b3;
+  top: 38.5em;
+  width: 45em;
+  height: 20em;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.containerI4{
+  position: absolute;
+  background-color: #363636;
+  top: 30.5em;
+  left: 70em;
+  width: 22em;
+  height: 28em;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.container-menuI{
+  padding-top: 3.5em;
+}
+
+.calendar{
+  position: absolute;
+  z-index: 1; 
+}
+
+.containerWhiteI1{
+  position: absolute;
+  top: 8em;
+  left: 23em;
+  width: 70em;
+  height: 35em;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.containerWhiteI1 > ul > li{
+  place-content: center; 
+}
+
+.containerWhiteI2{
+  position: absolute;
+  top: 8em;
+  left: 23em;
+  width: 70em;
+  height: 63em;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.addEmployer{
+  position: absolute;
+  left: 3em;
+}
+
+@media(max-width: 1015px){
+  .windows1{
+    top: 17.5em;
+    left: 17em;
+  }
+
+  .contenedor-windows1{
+    top: 16em;
+    left: 20em;
+  }
+
+  .windows2{
+    top: 5em;
+    left: 17.5em;
+  }
+
+  .contenedor-windows2{
+    top: 1em;
+    left: 20em;
+  }
+  .container-carousel{
+    display: none;
+  }
+
+  .another-info{
+    position: absolute;
+    top: -4em;
+    left: 6em;
+  }
+
+  .twitter{
+    position: absolute;
+    top: -3em;
+    left: -25em;
+  }
+
+  .facebook{
+    position: absolute;
+    top: -6em;
+    left: -25em;
+  }
+
+  .instagram{
+    position: absolute;
+    top: -9em;
+    left: -25em;
+  }
+
+  .linea-horizontal{
+    width: 45em;
+  }
+
+  .fdepantalla1{
+    position: absolute;
+    left: -18em;
+  }
+
+  .container-contacto > .contactos-info > ul > li{
+    display: table-column;
+    position: relative;
+    width: 20em;
+  }
+
+  .group-venemergencia{
+    left: 18em;
+  }
+
+}
+
+@media(max-width: 750px){
+  .menu-escritorio{
+    flex-direction:column;
+  }
+  .menu-escritorio > ul{
+    top: 3em;
+    flex-direction: column;
+    margin-right: 38em;
+    min-width: 30em;
+    align-items: center;
+
+  }
+  .Bis{
+    margin-top:2em;
+    margin-right: 25em;
+  }
+  .eslogan{
+    top: 12em;
+    margin-left: -5em;
+    text-shadow: 10px 10px 10px 10px #AF0403;
+  }
+  .fdepantalla1{
+    position: absolute;
+    left: -28em;
+  }
+
+  .windows1{
+    top: 17.5em;
+    left: 17em;
+  }
+
+  .contenedor-windows1{
+    top: 16em;
+    left: 20em;
+  }
+
+  .windows2{
+    top: 5em;
+    left: 17.5em;
+  }
+
+  .contenedor-windows2{
+    top: 1em;
+    left: 20em;
+  }
+
+  .container-carousel{
+    display: none;
+  }
+
+  .fdepantallaIS{
+    display: none;
+  }
+
+  .col-md-6{
+    position: absolute;
+    left: -25em;
+    top: 10em;
+  }
+}
+
+@media(max-width: 375px){
+  .fdepantalla1{
+    left: -38em;
+  }
+
+  .eslogan{
+    top: .5em;
+  }
+
+  .group-venemergencia{
+    left: 2em;
+  }
+}
+
+@media(max-width: 560px){
+  .fdepantalla1{
+    left: -30em;
+  }
+
+  .windows1{
+    top: 25em;
+    left: .5em;
+  }
+
+  .contenedor-windows1{
+    top: 25em;
+    left: 0em;
+  }
+
+  .windows2{
+    top: 37em;
+    left: .5em;
+  }
+
+  .contenedor-windows2{
+    top: 40em;
+    left: 0em;
+  }
+}
