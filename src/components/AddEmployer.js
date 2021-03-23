@@ -16,6 +16,7 @@ import { MenuItem, MenuList } from '@material-ui/core';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 
 
 const estadoCivil = [
@@ -83,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    backgroundColor: '#e60000',
     [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
@@ -192,26 +194,29 @@ const renderMenu = (
       <div className={ classes.toolbar } />
       <MenuList>
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz">
-        Inicio
+          Inicio
         </MenuItem>
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz/opcionesdeusuario">
-        Opciones de Empleado
+          Opciones de Empleado
+        </MenuItem>
+        <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz/noticias">
+          Noticias
+        </MenuItem>
+        <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz/servicios">
+          Servicios
         </MenuItem>
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/">
-        Servicios
-        </MenuItem>
-        <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/">
-        Universidad Corporativa
+          Universidad Corporativa
         </MenuItem>
         <Divider />
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/">
-        Correo
+          Correo
         </MenuItem>
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz/calendario">
-        Calendario
+          Calendario
         </MenuItem>
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/">
-        Libreta de Direcciones
+          Libreta de Direcciones
         </MenuItem>
       </MenuList>
       <Button type="submit" href="/" style={{ backgroundColor: '#E32726', padding: '0.8em', paddingLeft: '5em', paddingRight: '5em',color:'#ffffff', left: '5em', top: '13em', fontSize: 'x-small' }}>Cerrar Sesion</Button>
@@ -316,7 +321,7 @@ const renderMenu = (
              <TextField style={{ backgroundColor:'#F4F4F4', width: '18em' }} label="Cedula de Identidad" variant="outlined" type="number" />
              <TextField select value={ Currency } onChange={ handleChange } style={{ backgroundColor:'#F4F4F4', width: '18em' }} selectProps={{ native: true, }} label="Sexo" variant="outlined">{ Sexo.map((option) =>(<option key={ option.value } value={ option.value }>{ option.label }</option>))}</TextField>
              <TextField style={{ backgroundColor:'#F4F4F4', width: '18em' }} label="Codigo" variant="outlined" type="number" /> 
-             <TextField select value={ estCivil } onChange={ handleChangeEC } style={{ backgroundColor:'#F4F4F4', width: '18em' }} label="Estado Civil" variant="outlined">{ estadoCivil.map((estadoC) =>(<estadoC key={ estadoC.value } value={ estadoC.value }>{ estadoC.label }</estadoC>))}</TextField> 
+             <TextField select value={ estCivil } onChange={ handleChangeEC } style={{ backgroundColor:'#F4F4F4', width: '18em' }} label="Estado Civil" variant="outlined">{ estadoCivil.map((estadoC) =>(<estadoC key={ estadoC.value } value={ estadoC.value }><Grid>{ estadoC.label }</Grid></estadoC>))}</TextField> 
              <TextField style={{ backgroundColor:'#F4F4F4', width: '18em' }} label="Correo" variant="outlined" type="email" />
              <TextField style={{ backgroundColor:'#F4F4F4', width: '18em' }} label="Correo Personal" variant="outlined" type="email" />
              <TextField style={{ backgroundColor:'#F4F4F4', width: '18em' }} label="Telefono Movil" variant="outlined" type="number" />
@@ -328,8 +333,9 @@ const renderMenu = (
             </form>
           </div>
           <div className="addEmployerSave">
-          <Button type="submit" href="/interfaz/opcionesdeusuario/añadirempleado" style={{ backgroundColor: '#E32726', padding: '0.8em', paddingLeft: '7em', paddingRight: '7em',color:'#ffffff', left: '70em', top: '55em', fontSize: 'x-small' }}>Guardar</Button>
-          <Button type="submit" href="/interfaz" style={{ backgroundColor: '#E8E8E8', padding: '0.8em', paddingLeft: '7em', paddingRight: '7em',color:'#BCBCBC', left: '25em', top: '55em', fontSize: 'x-small' }}>Cancelar</Button>
+
+          <Button type="submit" href="/interfaz" style={{ backgroundColor: '#E8E8E8', padding: '0.8em', paddingLeft: '6.7em', paddingRight: '6.7em',color:'#BCBCBC', fontSize: 'x-small' }}>Cancelar</Button>
+          <Button type="submit" href="/interfaz/opcionesdeusuario/añadirempleado" style={{ backgroundColor: '#E32726', padding: '0.8em', paddingLeft: '7em', paddingRight: '7em',color:'#ffffff', fontSize: 'x-small' }}>Guardar</Button>
           </div>
           </div>
         </div>

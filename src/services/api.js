@@ -1,9 +1,10 @@
 import axios from "axios";
 
-const serverUrl = process.env.REACT_APP_SERVER_URL;
+const serverUrl = "http://localhost:8000/";
 export function apiAuth(method, path, data, formData = false) {
   return new Promise((resolve, reject) => {
     axios.defaults.baseURL = serverUrl;
+    console.log("serverUrl:::", serverUrl);
     if (formData) {
       axios.defaults.headers.common["Content-Type"] = "multipart/form-data";
     }
@@ -18,7 +19,7 @@ export function apiAuth(method, path, data, formData = false) {
 }
 export function apiCall(method, path, data, headers = {}) {
   return new Promise((resolve, reject) => {
-    axios.defaults.baseURL = "http://localhost:3001/";
+    axios.defaults.baseURL = "http://localhost:8000/";
     axios.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${localStorage.getItem("token")}`;
@@ -30,4 +31,12 @@ export function apiCall(method, path, data, headers = {}) {
         return reject(err.response);
       });
   });
+}
+
+export function setTokenHeader(token){
+  if(token){
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  } else {
+    delete axios.defaults.headers.common["Authorization"];
+  }
 }

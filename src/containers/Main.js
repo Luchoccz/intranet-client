@@ -10,6 +10,9 @@ import UserOptions from "../components/UserOptions";
 import { login } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
 import AddEmployer from "../components/AddEmployer";
+import News from "../components/News";
+import AddressBook from "../components/AddressBook";
+import Services from '../components/Services';
 
 const Main = props => {
   const { login, currentUser, errors, removeError } = props;
@@ -33,6 +36,12 @@ const Main = props => {
         <Route exact path="/interfaz/opcionesdeusuario" render={props => <UserOptions currentUser{ ...currentUser }{ ...props } />} />
 
         <Route exact path="/interfaz/opcionesdeusuario/añadirempleado" render={props => <AddEmployer currentUser{ ...currentUser }{ ...props } />} />
+
+        <Route exact path="/interfaz/noticias" render={props => <News currentUser{ ...currentUser }{ ...props } />} />
+
+        <Route exact path="/interfaz/servicios" render={props => <Services currentUser{ ...currentUser }{ ...props } />} />
+
+        <Route exact path="/interfaz/libretadedirecciones" render={props => <AddressBook currentUser{ ...currentUser }{ ...props } />} />
 
       </Switch>
     </div>

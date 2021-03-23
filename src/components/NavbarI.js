@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
@@ -13,7 +12,6 @@ import { makeStyles, useTheme, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { Link as RouterLink } from "react-router-dom";
 import { MenuItem, MenuList } from '@material-ui/core';
-import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -143,26 +141,29 @@ const renderMenu = (
       <div className={ classes.toolbar } />
       <MenuList>
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz">
-        Inicio
+          Inicio
         </MenuItem>
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz/opcionesdeusuario">
-        Opciones de Empleado
+          Opciones de Empleado
+        </MenuItem>
+        <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz/noticias">
+          Noticias
         </MenuItem>
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz/servicios">
-        Servicios
+          Servicios
         </MenuItem>
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/">
-        Universidad Corporativa
+          Universidad Corporativa
         </MenuItem>
         <Divider />
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/">
-        Correo
+          Correo
         </MenuItem>
         <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz/calendario">
-        Calendario
+          Calendario
         </MenuItem>
-        <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/">
-        Libreta de Direcciones
+        <MenuItem className={ classes.MenuItem } component= { RouterLink } to="/interfaz/libretadedirecciones">
+          Libreta de Direcciones
         </MenuItem>
       </MenuList>
       <Button type="submit" href="/" style={{backgroundColor: '#E32726', padding: '0.8em', paddingLeft: '5em', paddingRight: '5em',color:'#ffffff', left: '5em', top: '13em', fontSize: 'x-small' }}>Cerrar Sesion</Button>
