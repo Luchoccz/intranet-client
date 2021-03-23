@@ -15,6 +15,7 @@ import { MenuItem, MenuList } from '@material-ui/core';
 import 'react-calendar/dist/Calendar.css';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import logout from '../store/actions/auth';
 
 const drawerWidth = 280;
 
@@ -82,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function NavbarInterface(props) {
-  const { window } = props;
+  const { window, logout } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -166,7 +167,7 @@ const renderMenu = (
           Libreta de Direcciones
         </MenuItem>
       </MenuList>
-      <Button type="submit" href="/" style={{backgroundColor: '#E32726', padding: '0.8em', paddingLeft: '5em', paddingRight: '5em',color:'#ffffff', left: '5em', top: '13em', fontSize: 'x-small' }}>Cerrar Sesion</Button>
+      <Button type="submit" logout={logout} href="/" style={{backgroundColor: '#E32726', padding: '0.8em', paddingLeft: '5em', paddingRight: '5em',color:'#ffffff', left: '5em', top: '13em', fontSize: 'x-small' }}>Cerrar Sesion</Button>
     </div>
   );
 

@@ -4,8 +4,7 @@ import IconButton from '@material-ui/core/IconButton';
 const ContactUs = () => {
   return(
     <div className="container-contacto">
-      <div className="logo-alfondo">
-      </div>
+      <div className="logo-alfondo" />
       <div className="contactos-info">
         <ul>
           <li><h3>DIRECCION</h3><hr /><h5>Call Center 0800-VENEMED (8363633) Edif. Calle Cecilio Acosta, entre calles Páez y Sucre, Chacao, Caracas, Venezuela. info@grupov.com.ve</h5></li>
@@ -18,22 +17,19 @@ const ContactUs = () => {
       <div className="contactos-redes">
         <div className="icono-redes">
           <IconButton href="https://twitter.com/venemergencia/">
-            <div className="twitter">
-            </div>
+            <div className="twitter" />
           </IconButton>
           <IconButton href="https://es-la.facebook.com/venemergencia/">
-            <div className="facebook">
-            </div>
+            <div className="facebook" />
           </IconButton>
           <IconButton href="https://www.instagram.com/venemergencia/">
-            <div className="instagram">
-            </div>
+            <div className="instagram" />
           </IconButton>
         </div>
       </div>
       <div className="group-venemergencia">
-          <p>Group Venemergencia. All rights reserved</p>
-        </div>
+        <p>Group Venemergencia. All rights reserved</p>
+      </div>
       <div className="linea-horizontal" />
       <div className="linea-vertical" />
     </div>

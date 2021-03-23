@@ -10,6 +10,9 @@ class Services extends Component {
         <NavbarInterface />
         <Grid container>
           <div className="containerWhiteI3">
+            <div className="container">
+
+            </div>
           </div>
           </Grid>
       </div>

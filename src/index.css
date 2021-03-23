@@ -23,12 +23,6 @@ code {
     monospace;
 }
 
-@media (min-width: 600px) and (max-width:900px){
-  h1{
-    position: flex;
-  }
-}
-
 /* Carousel /////////////////////////////*/
 
 .container-carousel{
@@ -241,7 +235,7 @@ code {
   font-weight: 100;
 }
 
-/* windows */
+/*///////// windows ////////////////////////////////////////*/
 
 .contenedor-windows1{
   position: absolute;
@@ -341,7 +335,7 @@ code {
 .fdepantalla1{
   display:flex;
   top: 0em;
-  left: 0em;
+  left: 0;
   width: 68em;
   height: 35em;
   justify-content:right;
@@ -351,6 +345,18 @@ code {
 }
 
 /* Inicia Secion en Venemergencia */
+
+.ingresarI > button{
+  position: relative;
+  top: 2em;
+  background-color: #e60000;
+  color: white;
+}
+
+.ingresarI > button:hover{
+  background-color: #AF0403;
+  color: white;
+}
 
 #contenedor-iniciasesion {
   position: absolute;
@@ -455,6 +461,15 @@ code {
   border-radius: 0 5px 5px 0;
   padding-top: 20px;
   padding-right: 200px;
+}
+
+.alert-danger{
+  position: absolute;
+  top: 30em;
+  left: 50%;
+  width: 100%;
+  height: 20%;
+  color: #000000;
 }
 
 /* Ventana de Nosotros */
@@ -626,7 +641,7 @@ code {
 .group-venemergencia{
   position: absolute;
   top: 16em;
-  left: 30em;
+  left: 35%;
   width: 20em;
   height: 1em;
   align-items: center;
@@ -824,7 +839,7 @@ code {
 
 .cuadro1d{
   position:absolute;
-  top: 0;
+  top: 0em;
   width: 102.2%;
   left: -2em;
   padding-left: 23em;
@@ -921,6 +936,7 @@ code {
 
 .containerWhiteI3{
   position: relative;
+  top: 4em;
   left: 1em;
   width: 100%;
   height: 37em;
@@ -1010,10 +1026,6 @@ code {
     display: table-column;
     position: relative;
     width: 20em;
-  }
-
-  .group-venemergencia{
-    left: 18em;
   }
 
   .cuadro1d{
@@ -1144,6 +1156,10 @@ code {
     left: -20em;
     width: 70%;
     }
+
+    .group-venemergencia{
+      left: 15%;
+    }
 }
 
 
@@ -1154,10 +1170,6 @@ code {
 
   .eslogan{
     top: .5em;
-  }
-
-  .group-venemergencia{
-    left: 2em;
   }
 }
 
@@ -1184,6 +1196,10 @@ code {
   .contenedor-windows2{
     top: 40em;
     left: 0em;
+  }
+
+  .group-venemergencia{
+    left: 15%;
   }
 }
 

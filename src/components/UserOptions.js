@@ -25,16 +25,16 @@ class userOptions extends Component {
         <div className="cuadro1d">
           <div className="containerWhiteI3" noWrap>
             <Grid>
-            <Typography paragraph variant='h2' style={{ placeContent: 'center', width:'100%', height: '3em', backgroundColor: '#000000', fontSize: 'xx-large',  color: '#e60000', fontWeight: '900',  marginTop: '2em', paddingTop: '2em' }} noWrap>Opciones de Empleado</Typography>
+            <Typography paragraph variant='h2' style={{ position: 'relative', paddingTop: '2em', paddingRight: '4em', left: '30%', width:'100%', fontSize: 'xx-large',  color: '#e60000', fontWeight: '900' }} noWrap>Opciones de Empleado</Typography>
             </Grid>
             <Grid>
-            <MenuItem component= { RouterLink } to="/interfaz/opcionesdeusuario/añadirempleado" style={{ placeContent: 'center', color: '#696969', padding:'1em', '&:hover':{ color:'#e60000' }}}>Anadir</MenuItem>
+            <MenuItem component= { RouterLink } to="/interfaz/opcionesdeusuario/añadirempleado" style={{ top: '3em', placeContent: 'center', color: '#696969', padding:'1em', '&:hover':{ color:'#e60000' }}}>Anadir</MenuItem>
             </Grid>
             <Grid>
-            <MenuItem component= { RouterLink } to="/interfaz" style={{ placeContent: 'center', color: '#696969', padding:'1em', '&:hover':{ color:'#e60000' }}}>Modificar</MenuItem>
+            <MenuItem component= { RouterLink } to="/interfaz" style={{ top: '3em', placeContent: 'center', color: '#696969', padding:'1em', '&:hover':{ color:'#e60000' }}}>Modificar</MenuItem>
             </Grid>
             <Grid>
-            <MenuItem component= { RouterLink } to="/interfaz" style={{ placeContent: 'center', color: '#696969', padding:'1em' }}>Eliminar</MenuItem>
+            <MenuItem component= { RouterLink } to="/interfaz" style={{ top: '3em', placeContent: 'center', color: '#696969', padding:'1em' }}>Eliminar</MenuItem>
             </Grid>
         </div>
       </div>

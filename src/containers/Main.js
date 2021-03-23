@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import Homepage from "../components/Homepage";
-import Authform from "../components/AuthForm";
+import Singin from "../components/Singin";
 import Nosotros from "../components/Nosotros";
 import Contacto from "../components/Contacto";
 import InterfaceHome from "../components/InterfaceHome";
@@ -23,7 +23,7 @@ const Main = props => {
         
         <Route exact path="/iniciarsesion" render={props => {
           return(
-            <Authform removeError={ removeError } errors={ errors } login={ login } iniciar {...props} />
+            <Singin removeError={ removeError } errors={ errors } login={ login } iniciar {...props} />
           )
         }} />
 

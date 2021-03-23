@@ -14,7 +14,16 @@ export function setAuthorizationToken(token){
   setTokenHeader(token);
 }
 
+export function logout(){
+  return dispatch => {
+    localStorage.clear();
+    setAuthorizationToken(false);
+    dispatch(setCurrentUser({}));
+  };
+}
+
 export const login = (value) => {
+  console.log('value', value);
   return async (dispatch) => {
     try {
       addError(dispatch);
@@ -28,11 +37,15 @@ export const login = (value) => {
       }
       removeError(dispatch);
       return data;
-    } catch (e) {
-      removeError(dispatch);
-      return e && e.data
-        ? e.data
-        : "Ha ocurrido un error, por favor consulte con el administrador del sistema.";
+    } catch (errors) {
+      console.log('error e: ', errors.data);
+      addError(errors.data.detail);
+      throw Error(errors.data.detail);
+      // addError(e.details);
+      // removeError(dispatch);
+      // return e && e.data
+      //   ? e.data
+      //   : "Ha ocurrido un error, por favor consulte con el administrador del sistema.";
     }
   };
 };
