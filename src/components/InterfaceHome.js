@@ -12,9 +12,9 @@ class Home extends Component {
     return (
       <div className="cuadro1d">
         <NavbarInterface />
-        <Grid container>
+        <div className="container1all">
+          <Grid item xs={ 6 }>
           <div className="containerI1">
-            <Grid xs={12} sm={6} md={4}>
             <div className="cont1">
               <h3 style={{ marginLeft:"1.5em" }}>Noticias</h3>
               <div className="containerNoticias">
@@ -26,11 +26,13 @@ class Home extends Component {
                   </div>
               </div>
             </div>
-            </Grid>
           </div>
+          </Grid>
+          <Grid item xs={ 6 }>
           <div className="containerI2">
             <Calendar />
           </div>
+          </Grid>
           <div className="containerI3">
           </div>
           <div className="containerI4">
@@ -39,14 +41,10 @@ class Home extends Component {
               <CheckboxListSecondary />
             </div>
           </div>
-          </Grid>
+          </div>
       </div>
     )
   }
 }
-
-
-
-
 
 export default Home;

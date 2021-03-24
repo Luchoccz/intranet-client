@@ -1,6 +1,10 @@
 import { Typography, createMuiTheme, responsiveFontSizes, MuiThemeProvider } from "@material-ui/core";
 import React from "react";
 import Carousel from "./Carousel";
+import fdepantalla1 from "../images/fdepantalla1.png";
+import NavbarI from '../components/NavbarI';
+
+const medium = '/home/luiszrita/Workspace/Intranet/intranet-client/src/images/fdepantalla1.png';
 
 let theme = createMuiTheme();
 theme =responsiveFontSizes(theme);
@@ -9,7 +13,9 @@ const Homepage = () => {
   return (
     <div className="contenedor-inicio">
       <div className="paginicio">
-          <div className="fdepantalla1" />
+          <div className="fdepantalla1">
+            <img src={fdepantalla1} />
+          </div>
         <div className="fondodepantalla2">
         </div>
         <div className="eslogan">
@@ -47,7 +53,7 @@ const mostrar = ({ currentUser }) => {
 if (!currentUser.isAuthenticated){
   return (Homepage())
   }
-  return (<div><h1>LO LOGRASTE</h1></div>)
+  return ({ NavbarI })
 }
 
 export default mostrar;

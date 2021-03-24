@@ -3,7 +3,15 @@ import { login } from '../store/actions/auth'
 import { Button } from '@material-ui/core/';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
+const outherTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+  },
+});
 export default class AuthFrom extends Component {
   constructor(props){
     super(props);
@@ -47,8 +55,12 @@ export default class AuthFrom extends Component {
               { errors.message && (
               <div className="alert-danger">{errors.message}</div>) 
               }
-              <TextField login={login} style={{ backgroundColor: '#F4F4F4', margin: '1em' }} label="Usuario" autoComplete="off" type='text' onChange={ this.handleChange } id="username" name="username" value={ username } color="primary" variant="outlined" />
-              <TextField login={login} style={{ backgroundColor: '#F4F4F4' }} label="Password" autoComplete="off" type='password' onChange={ this.handleChange } id="password" name="password" value={ password } variant="outlined" />
+              <ThemeProvider theme={ outherTheme }>
+                <TextField login={login} style={{ backgroundColor: '#F4F4F4', margin: '1em' }} label="Usuario" autoComplete="off" type='text' onChange={ this.handleChange } id="username" name="username" value={ username } color="primary" variant="outlined" />
+              </ThemeProvider>
+              <ThemeProvider theme={ outherTheme }>
+                <TextField login={login} style={{ backgroundColor: '#F4F4F4' }} label="Password" autoComplete="off" type='password' onChange={ this.handleChange } id="password" name="password" value={ password } variant="outlined" />
+              </ThemeProvider>
               <div className="ISforget">
                 <a href="https://www.google.com/">Olvidaste tu Contrasena?</a>
                 <div className="ingresarI">
